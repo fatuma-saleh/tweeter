@@ -1,0 +1,29 @@
+.mainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100%; 
+  background-color: #4056A1;
+  color:#FFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  
+
+  
+}
+.logo{
+  font-family: Bungee;
+}
+.textlogo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fas.fa-angle-double-down{
+  display: flex;
+  color: red;
+  align-items: flex-end;
+  justify-content: center;
+}
