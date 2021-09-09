@@ -1,0 +1,35 @@
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-left: 40px;
+ 
+}
+
+.counter{
+  font-family: Bungee;
+  color: gray;
+}
+
+.button{
+  background-color: royalblue;
+  font-family: Bungee;
+  color:white;
+}
+
+.tweet-text{
+  font-family:Source Sans Pro;
+}
+
+.buttonCounter{
+  display: flex;
+  justify-content :space-between;
+  margin-top:  20px; 
+}
+#tweet-text{
+  border: none;
+  outline: none;
+  border-bottom: 3px solid black;
+
+}
