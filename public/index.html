@@ -25,21 +25,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/time-ago.js"></script>
+  
+  <!-- timeago.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
-  <nav class=mainNav>
+  <nav class=main-nav>
     <span class="logo">tweeter</span>
     <div>
-      <span class="textlogo"><strong>Write &nbsp;</strong> a new tweet</span>
+      <span class="text-logo"><strong>Write &nbsp;</strong> a new tweet</span>
       <i class="fas fa-angle-double-down"></i>
     </div>
   </nav>
@@ -49,7 +53,7 @@
     </div>
     <br>
     <div>
-      <h2><strong>Fatuma </strong>Saleh</h2>
+      <h2><b>Fatuma </b>Saleh</h2>
     </div>
   </header>
 
@@ -59,11 +63,29 @@
       <form action="/tweets" method="POST">
         <label for="tweet-text"><b>What are you humming about?</b></label>
         <textarea name="text" id="tweet-text"></textarea>
-        <div class="buttonCounter">
+        <div class="button-counter">
           <button class="button"type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text"><b>140<b</output>
+          <output name="counter" class="counter" for="tweet-text"><b>140</b></output>
         </div>
       </form>
+    </section>
+    <section class="previous-tweets">
+      <article class="tweet">
+        <header>header</header>
+        <hr class="line">
+        <footer class="footer">
+          <section class="time-ago">
+            10 days ago
+          </section>
+          <section class="icons">
+          <i class="fas fa-flag"></i> 
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+          
+          </section>
+        </footer>
+
+      </article>
     </section>
   </main>  
 </body> 
