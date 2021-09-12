@@ -1,4 +1,4 @@
-.mainNav {
+.main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,14 +8,16 @@
   color:#FFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  position: fixed;
+  top: 0;
+  width:100%;
   
-
   
 }
 .logo{
   font-family: Bungee;
 }
-.textlogo{
+.text-logo{
   display: flex;
   align-items: center;
   justify-content: center;
