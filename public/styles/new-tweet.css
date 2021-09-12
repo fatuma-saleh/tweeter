@@ -22,7 +22,7 @@ form{
   font-family:Source Sans Pro;
 }
 
-.buttonCounter{
+.button-counter{
   display: flex;
   justify-content :space-between;
   margin-top:  20px; 
@@ -36,4 +36,43 @@ form{
 /* counter turns red when < 0 */
 .red{
  color: red;
+}
+
+.previous-tweets {
+  border: 3px solid black; 
+  margin:  20px; 
+  /* timeago.format(new Date());     */
+}
+.previous-tweets:hover {
+  box-shadow: 10px 10px 0px gray;
+}
+.icons{
+  display:flex;
+  justify-content: flex-end;
+  
+}
+.fas.fa-flag:hover{
+  color: orange;
+}
+
+.fas.fa-retweet:hover{
+  color: orange;
+}
+
+.fas.fa-heart:hover{
+  color: orange;
+}
+
+.fas{
+  margin-left: 10px;
+}
+
+.footer{
+  display:flex;
+  justify-content: space-between;
+}
+
+.line{
+  border-bottom:3px solid black;
+  margin: 10px;
 }
