@@ -5,7 +5,7 @@
   margin:  20px; 
   padding: 20px 20px 20px 20px;
   
-  /* timeago.format(new Date());     */
+  
 }
 
 .user{
@@ -15,11 +15,11 @@
 .tweet:hover {
   box-shadow: 10px 10px 0px gray;
 }
-.icons{
+/* .icons{
   display:flex;
   justify-content: flex-end;
   
-}
+} */
 .fas.fa-flag:hover{
   color: orange;
 }
@@ -33,7 +33,9 @@
 }
 
 .fas{
+  
   margin-left: 10px;
+  color:royalblue
 }
 
 .footer{
@@ -52,3 +54,6 @@
   overflow-wrap: break-word;
 }
   
+.email{
+  color:cornflowerblue;
+}
