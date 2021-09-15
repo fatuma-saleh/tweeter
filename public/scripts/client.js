@@ -6,59 +6,43 @@
 
 $(document).ready(function () {
 
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png"
-  //       ,
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd"
-  //     },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ]
-
   const renderTweets = function (tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
 
     for (let tweet of tweets) {
-      const tweetElement = createTweetElement(tweet)
-      $("#tweets").append(tweetElement)
+      const tweetElement = createTweetElement(tweet);
+      // $("#tweets").append(tweetElement)
+      $("#tweets").prepend(tweetElement);
+
 
     }
-  }
+  };
+
+  // Creates TweetElement for each tweet
 
   const createTweetElement = function (tweet) {
     const userName = tweet.user.name;
     const userAvatar = tweet.user.avatars;
     const userHandle = tweet.user.handle;
     const contentText = tweet.content.text;
-    const createdAt = tweet.created_at;
 
-    const htmlTweet = `
+    const newTime = (unix) => {
+      return timeago.format(unix);
+    };
+    const createdAt = newTime(tweet.created_at);
+
+    const $tweet = `
 <article class="tweet">
-  <section class="user">
+  <header class="user">
+  <div>
   <img src=${userAvatar}>
   <span>${userName}</span>
+  </div>
   <span class="email">${userHandle}</span>
-  </section>
-  <span>${contentText}</span>
+  </header>
+  <span class="text"><b> ${contentText}</b></span>
         <hr class="line">
         <footer class="footer">
           <section class="time-ago">
@@ -71,12 +55,12 @@ $(document).ready(function () {
           
           </section>
         </footer>
-   </article>`
+   </article>`;
 
-    const $tweet = $(htmlTweet)
+    // const $tweet = $(htmlTweet)
     //console.log($tweet)
-    return $tweet
-  }
+    return $tweet;
+  };
 
 
   // form submission using jquery
@@ -85,16 +69,28 @@ $(document).ready(function () {
     event.preventDefault();
     //console.log(event)
     const $form = $(this);
-    const formData = $form.serialize();
-    //const $input = $form.find('textarea');
-    //console.log('>>>>', $input.val())
-    $.ajax({
-      url: "/tweets",
-      type: "post",
-      data: formData
-    }).done(function (data) {
-      console.log('----data', data)
-    });
+
+    // validating the data before sending it to the server
+
+    if (event.target[0].value.length === 0) {
+      alert("Please enter text!!");
+    } else if (event.target[0].value.length > 140) {
+      window.alert("Please reduce your tweet length");
+    } else {
+      const formData = $form.serialize();
+      //const $input = $form.find('textarea');
+      //console.log('>>>>', $input.val())
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data: formData
+      }).then(function (data) {
+        //console.log('----data', data);
+        loadTweets();
+      }).catch((error) => {
+        console.log(error);
+      });
+    }
 
   });
 
@@ -104,16 +100,19 @@ $(document).ready(function () {
     // const $form = $(this);
     $.ajax({
       url: "/tweets",
-      type: "get",
-      // data: $form
-    }).done(function (data) {
+      method: "GET",
+    }).then(function (data) {
       //  console.log('----data', data)
       // return data;
       renderTweets(data);
+    }).catch((error) => {
+      console.log(error);
     });
 
-  }
+  };
+
   loadTweets();
 
-})
+
+});
 
