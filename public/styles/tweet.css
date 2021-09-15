@@ -1,0 +1,54 @@
+.tweet {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black; 
+  margin:  20px; 
+  padding: 20px 20px 20px 20px;
+  
+  /* timeago.format(new Date());     */
+}
+
+.user{
+  display: flex;
+  justify-content: space-between;
+}
+.tweet:hover {
+  box-shadow: 10px 10px 0px gray;
+}
+.icons{
+  display:flex;
+  justify-content: flex-end;
+  
+}
+.fas.fa-flag:hover{
+  color: orange;
+}
+
+.fas.fa-retweet:hover{
+  color: orange;
+}
+
+.fas.fa-heart:hover{
+  color: orange;
+}
+
+.fas{
+  margin-left: 10px;
+}
+
+.footer{
+  display:flex;
+  justify-content: space-between;
+}
+
+.line{
+  border-bottom:3px solid black;
+  margin: 10px;
+}
+
+.text{
+  margin-bottom: 40px;
+  margin-top: 40px;
+  overflow-wrap: break-word;
+}
+  
