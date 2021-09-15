@@ -33,20 +33,30 @@ $(document).ready(function () {
     };
     const createdAt = newTime(tweet.created_at);
 
+    //Implementing Cross S.S
+
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
+    //const safeHTML = `<p>${escape(textFromUser)}</p>`;
+
     const $tweet = `
 <article class="tweet">
   <header class="user">
   <div>
-  <img src=${userAvatar}>
-  <span>${userName}</span>
+  <img src=${escape(userAvatar)}>
+  <span>${escape(userName)}</span>
   </div>
-  <span class="email">${userHandle}</span>
+  <span class="email">${escape(userHandle)}</span>
   </header>
-  <span class="text"><b> ${contentText}</b></span>
+  <span class="text"><b> ${escape(contentText)}</b></span>
         <hr class="line">
         <footer class="footer">
           <section class="time-ago">
-            ${createdAt}
+            ${escape(createdAt)}
           </section>
           <section class="icons">
           <i class="fas fa-flag"></i> 
