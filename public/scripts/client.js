@@ -87,6 +87,10 @@ $(document).ready(function () {
       }).then(function (data) {
         //console.log('----data', data);
         loadTweets();
+
+        //Empty textarea after successful submission
+
+        $("#tweet-text").val("")
       }).catch((error) => {
         console.log(error);
       });
