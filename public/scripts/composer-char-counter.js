@@ -12,7 +12,10 @@ $(document).ready(function() {
     /* add a class named red  when counter < 0 */
       
     if (characterLength < 0){
-      $counter.addClass('red')
+      // $counter.addClass('red')
+      $counter.css('color','red')
+    }else{
+      $counter.css('color','gray')
     }
   });
 
