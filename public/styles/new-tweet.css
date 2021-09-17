@@ -18,9 +18,9 @@ form{
   color:white;
 }
 
-.tweet-text{
+/* .tweet-text{
   font-family:Source Sans Pro;
-}
+} */
 
 .button-counter{
   display: flex;
@@ -31,8 +31,10 @@ form{
   border: none;
   outline: none;
   border-bottom: 3px solid black;
-
-}
+  background-color: #f4f1ec;
+  
+  }
+  
 /* counter turns red when < 0 */
 .red{
  color: red;
