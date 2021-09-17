@@ -7,7 +7,11 @@
   align-items: center;
   background-color: #cc8800;
   background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
-  margin-top: 110px;
+  margin-top: 120px;
 
 }
 
+.user-name{
+  color:white;
+  font-size: xx-large;
+}
