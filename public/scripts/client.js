@@ -5,7 +5,7 @@
  */
 
 $(document).ready(function () {
-
+$(".error").hide();
   const renderTweets = function (tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
@@ -83,10 +83,11 @@ $(document).ready(function () {
     // validating the data before sending it to the server
 
     if (event.target[0].value.length === 0) {
-      alert("Please enter text!!");
+      $(".error").text("Can Not Submit An Empty Tweet!").slideDown();
     } else if (event.target[0].value.length > 140) {
-      window.alert("Please reduce your tweet length");
+      $(".error").text("Too Long,Limit is 140 Characters!").slideDown();
     } else {
+      $(".error").hide();
       const formData = $form.serialize();
       //const $input = $form.find('textarea');
       //console.log('>>>>', $input.val())
@@ -100,7 +101,8 @@ $(document).ready(function () {
 
         //Empty textarea after successful submission
 
-        $("#tweet-text").val("")
+        $("#tweet-text").val("");
+        $(".counter").text("140");
       }).catch((error) => {
         console.log(error);
       });
@@ -116,8 +118,6 @@ $(document).ready(function () {
       url: "/tweets",
       method: "GET",
     }).then(function (data) {
-      //  console.log('----data', data)
-      // return data;
       renderTweets(data);
     }).catch((error) => {
       console.log(error);
