@@ -5,6 +5,9 @@
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
 
+  <!-- Disable viewport zooming -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
@@ -27,7 +30,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -35,9 +38,11 @@
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   <script type="text/javascript" src="/scripts/time-ago.js"></script>
-  
+
   <!-- timeago.js library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -49,33 +54,39 @@
       <i class="fas fa-angle-double-down"></i>
     </div>
   </nav>
-  <header class="main-header">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <p class="user-name"><b>Fatuma </b>Saleh</p>
-    </div>
-  </header>
+  <div class="flex-container">
+    <header class="main-header">
+      <div>
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+        <p class="user-name"><b>Fatuma </b>Saleh</p>
+      </div>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container"> 
-    <section class="new-tweet">
-      <div class="error">Error message</div>
-      <form action="/tweets" method="POST">
-        <label for="tweet-text"><b>What are you humming about?</b></label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class="button-counter">
-          <button class="button" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text"><b>140</b></output>
-        </div>
-      </form>
-    </section>
-    <section id="tweets">
-    </section>
-    <i class="fas fa-angle-double-up" id="up-button"></i>
-  </main>  
-</body> 
+
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <div class="error">Error message</div>
+        <form action="/tweets" method="POST">
+          <label for="tweet-text"><b>What are you humming about?</b></label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="button-counter">
+            <button class="button" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text"><b>140</b></output>
+          </div>
+        </form>
+      </section>
+      <section id="tweets">
+      </section>
+      <i class="fas fa-angle-double-up" id="up-button"></i>
+    </main>
+  </div>
+ 
+
+
+</body>
 
 </html>

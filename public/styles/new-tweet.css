@@ -3,7 +3,7 @@ form{
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-left: 40px;
+  /* margin-left: 40px; */
  
 }
 
@@ -26,6 +26,7 @@ form{
   display: flex;
   justify-content :space-between;
   margin-top:  20px; 
+  margin-bottom: 40px;
 }
 #tweet-text{
   border: none;
