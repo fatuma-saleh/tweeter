@@ -20,3 +20,4 @@ Tweeter is a simple single-page,AJAX-based Twitter clone that uses jQuery,HTML5 
 !["Screenshot while typing a new tweet"](./docs/add-tweet.png)
 !["Screenshot after posting a new tweet"](./docs/post-tweet.png)
 !["Screenshot while trying to post an empty tweet"](./docs/error-tweet.png)
+!["Screenshot while using mobile view"](./docs/mobile-view.png)
