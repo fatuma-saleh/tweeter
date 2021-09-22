@@ -17,7 +17,7 @@
   font-size: xx-large;
 }
 
-/*   breakpoint for maximum  screen width of 768px */
+/*   breakpoint for maximum  screen width of 768px allows .main-header to be positioned accourdingly*/
 @media only screen and (max-width: 768px) {
   .main-header{
     margin: 0 auto;
