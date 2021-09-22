@@ -4,13 +4,11 @@ $(document).ready(function () {
   // fetching tweets with Ajax
 
   const loadTweets = function () {
-    // const $form = $(this);
     $.ajax({
       url: "/tweets",
       method: "GET",
     }).then(function (data) {
       renderTweets(data);
-      // console.log(data)
     }).catch((error) => {
       console.log(error);
     });
@@ -84,7 +82,6 @@ $(document).ready(function () {
 
   $("form").submit(function (event) {
     event.preventDefault();
-    // console.log(event)
     const $form = $(this);
 
     // validating the data before sending it to the server
@@ -96,14 +93,12 @@ $(document).ready(function () {
     } else {
       $(".error").hide();
       const formData = $form.serialize();
-      //const $input = $form.find('textarea');
-      // console.log('>>>>', $form)
+
       $.ajax({
         url: "/tweets",
         method: "POST",
         data: formData
       }).then(function (data) {
-        //console.log('----data', data);
         loadTweets();
 
         //Empty textarea after successful submission and reset character counter back to 140
@@ -135,9 +130,8 @@ $(document).ready(function () {
   });
 
   // Hide the error message and load the tweets when the form loads
+
   $(".error").hide();
   loadTweets();
-
-
 });
 
