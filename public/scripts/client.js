@@ -17,7 +17,7 @@ $(document).ready(function () {
 
   const renderTweets = function (tweets) {
 
-    // avoid the previous tweets from been rendered everytime new tweet is posted
+    // avoiding the previous tweets from been rendered everytime new tweet is posted
 
     const $container = $("#tweets");
     $container.empty();
@@ -34,6 +34,7 @@ $(document).ready(function () {
   // Creates TweetElement for each tweet
 
   const createTweetElement = function (tweet) {
+
     const userName = tweet.user.name;
     const userAvatar = tweet.user.avatars;
     const userHandle = tweet.user.handle;
@@ -129,7 +130,7 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: 0 }, '300');
   });
 
-  // Hide the error message and load the tweets when the form loads
+  // Hide the error message and load the tweets when the page loads
 
   $(".error").hide();
   loadTweets();

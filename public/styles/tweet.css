@@ -2,63 +2,59 @@
   display: flex;
   flex-direction: column;
   border: 3px solid black; 
-  /* margin:  20px;  */
   padding: 20px 20px 20px 20px;
   width: 100%;
-  margin-bottom: 20px;
-  
+  margin-bottom: 20px; 
 }
 
-.user{
+.user {
   display: flex;
   justify-content: space-between;
 }
+
 .tweet:hover {
   box-shadow: 10px 10px 0px gray;
 }
-/* .icons{
-  display:flex;
-  justify-content: flex-end;
-  
-} */
-.fas.fa-flag:hover{
+
+.fas.fa-flag:hover {
   color: orange;
 }
 
-.fas.fa-retweet:hover{
+.fas.fa-retweet:hover {
   color: orange;
 }
 
-.fas.fa-heart:hover{
+.fas.fa-heart:hover {
   color: orange;
 }
 
-.fas{
+.fas {
   
   margin-left: 10px;
   color:royalblue
 }
 
-.footer{
+.footer {
   display:flex;
   justify-content: space-between;
 }
 
-.line{
+.line { 
   border-bottom:3px solid black;
   margin: 10px;
 }
 
-.text{
+.text {
   margin-bottom: 40px;
   margin-top: 40px;
   overflow-wrap: break-word;
 }
   
-.email{
+.email {
   color:cornflowerblue;
 }
-.error{
+
+.error {
   border: 1px solid;
 	margin: 10px auto;
 	padding: 15px 10px 15px 50px;
@@ -68,11 +64,10 @@
   color: black;
 	background-color: #FFBABA;
 	background-image: url('https://i.imgur.com/GnyDvKN.png');
-  /* visibility: hidden; */
 }
-#up-button{
+
+#up-button {
     display: inline-block;
-    background-color:red; 
     width: 50px;
     height: 50px; 
     text-align: center;
@@ -83,18 +78,11 @@
     right: 30px;
     z-index: 1000;
     visibility: hidden;
-    transition: background-color .3s, 
-    /* opacity .5s, visibility .5s; */
-    
-}
+    color:red;
+    }
 
 #up-button.show {
   opacity: 1;
   visibility: visible;
 }
 
-/* #tweets{
-  margin-left: 20px;
-  margin-right: 20px;
-
-} */

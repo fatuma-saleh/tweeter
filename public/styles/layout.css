@@ -1,8 +1,4 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+
 html {
   box-sizing: border-box;
 }
@@ -19,9 +15,6 @@ body {
   font-family: Source Sans Pro;
 }
 
-
-/* styling the main element */
-
 main {
   width: 90%;
   align-items: center;
@@ -29,76 +22,30 @@ main {
   margin: 0 auto;
 }
 
-.flex-container{
+.flex-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-top: 150px;
-  /* flex-wrap: wrap; */
   padding: 10px;
   align-items: flex-start;
   }
 
               /* Responsive Designs */
 
-/*  breakpoint that target tablets with maximum width of 1024px - including smartphonesis  */
+/*   breakpoint for maximum  screen width of 1024px allows the header and container to be positioned accourdingly*/
 
 @media only screen and (max-width: 1024px) {
-   .main-header{
-    display:flex;
-    flex-direction: column;
-    height: 400px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #cc8800; */
-    /* margin-left: -20px; */
-    } 
-}
+  .main-header {
+    margin: 0 auto;
+  }
 
-/* breakpoint that targets  screen sizes 768px and below */
-
-@media only screen and (max-width: 768px) {
-  .flex-container{
+  .flex-container {
     flex-direction: column;
     padding: 0;
   }
 }
 
-/* smartphone breakpoint for maximum width of around 420px */
-@media only screen and (max-width: 420px) {
-  
-  .main-header{
-    /* flex-direction: column; */
-    height: 400px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #cc8800; */
-    /* margin-left: -20px;  */
-     
-    /* margin-left: -70px; */
-  }
-  
-  /* #tweets{
-    margin-left: 80px;
-    margin-right: 80px;
-  } */
 
-  /* .logo{
-    margin-top: 60px;
-  }
-  .text-logo{
-    margin-top: 40px;
-  } */
-
-  
-  /* .button-counter{
-   margin-left: ; */
-   /* .new-tweet{
-     margin-right: 20px;
-   } */
-   
-}
-
+ 
 
