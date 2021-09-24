@@ -89,8 +89,14 @@ $(document).ready(function () {
 
     if (event.target[0].value.length === 0) {
       $(".error").text("Can Not Submit An Empty Tweet!").slideDown();
+      setTimeout(() => {
+        $(".error").hide();
+      }, 3000)
     } else if (event.target[0].value.length > 140) {
       $(".error").text("Too Long,Limit is 140 Characters!").slideDown();
+      setTimeout(() => {
+        $(".error").hide();
+      }, 3000)
     } else {
       $(".error").hide();
       const formData = $form.serialize();
