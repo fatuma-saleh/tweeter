@@ -1,21 +1,17 @@
-$(document).ready(function() {
-  //console.log("callbackkkk")
-  $("#tweet-text").on('keyup', function() {
-    //console.log($(this).val().length); 
+$(document).ready(function () {
+
+  $("#tweet-text").on('keyup', function () {
+
     const characterLength = 140 - $(this).val().length;
-    console.log($(this).val().length);
-    let $form    = $(this).closest('form');
-    // console.log($form);
+    let $form = $(this).closest('form');
     let $counter = $form.find('.counter')
-   // console.log($counter)
     $counter.html(characterLength);
     /* add a class named red  when counter < 0 */
-      
-    if (characterLength < 0){
-      // $counter.addClass('red')
-      $counter.css('color','red')
-    }else{
-      $counter.css('color','gray')
+
+    if (characterLength < 0) {
+      $counter.css('color', 'red')
+    } else {
+      $counter.css('color', 'gray')
     }
   });
 
