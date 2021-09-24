@@ -3,7 +3,8 @@
   flex-direction: column;
   height: 400px;
   width: 100%;
-  max-width: 650px;
+  /* max-width: 650px; */
+  width: 650px;
   padding: 50px;
   margin: 0 30px;
   justify-content: center;
@@ -17,3 +18,9 @@
   font-size: xx-large;
 }
 
+@media only screen and (max-width: 1024px) {
+  .main-header {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
